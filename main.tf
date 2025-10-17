@@ -103,11 +103,11 @@ resource "ctcloud_ecx_v2_evm" "ecs_fw" {
   stop_type           = var.stop_type
 }
 
-resource "ctcloud_ecx_v2_evm_state" "ecx_v2_evm_state" {
-  count = var.enable_ecs_operation ? 1 : 0
-  action = var.action
-  instance_id = var.instance_id
-}
+# resource "ctcloud_ecx_v2_evm_state" "ecx_v2_evm_state" {
+#   count = var.enable_ecs_operation ? 1 : 0
+#   action = var.action
+#   instance_id = var.instance_id
+# }
 
 data "ctcloud_ecx_evm_vnc" "ecx_evm_vnc" {
   count = var.enable_ecs_vnc ? 1 : 0
