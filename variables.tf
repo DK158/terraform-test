@@ -18,7 +18,7 @@ variable "env" {
   default     = "ecxProd"
 }
 variable "master_order_id" {
-  description = "主订单id"
+  description = "主订单id "
   type        = string
   nullable    = false
   default     = ""
