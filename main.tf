@@ -115,3 +115,11 @@ data "ctcloud_ecx_evm_vnc" "ecx_evm_vnc" {
   instance_id = var.instance_id
   region_id = var.region_id
 }
+
+data "ctcloud_ecx_evm_vnc" "ecx_evm_vnc" {
+  count = var.enable_ecs_vnc ? 1 : 0
+  account_id = var.account_id
+  instance_id = var.instance_id
+  region_id = var.region_id
+}
+
